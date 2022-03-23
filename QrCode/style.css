@@ -1,0 +1,60 @@
+body {
+  background-image: url('../images/qrcode6.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.bar-code-main {
+  width: 50%;
+  margin: auto;
+}
+.title {
+  font-weight: 500;
+  
+}
+.qr-scanner {
+  width: 400px;
+  height: 400px;
+  border: 2px solid white;
+  
+}
+#startButton{
+  padding: 10px 20px 20px 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+#resetButton{
+  padding: 10px 20px 20px 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+#btnBack{
+  padding: 10px 20px 20px 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+#btnNext{
+  padding: 10px 20px 20px 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+pre {
+  background: #f4f5f6;
+  border-left: 0.3rem solid #9b4dca;
+  overflow-y: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 13px;
+}
+@media screen and (max-width: 600px) {
+  .bar-code-main {
+    width: 100%;
+    margin: auto;
+  }
+}

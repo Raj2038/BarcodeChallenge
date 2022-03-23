@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+   <!-- MDB -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <script language="javascript" type="text/javascript" src="../QrCode/qrcode.js"></script>
+
+  <!-- External css -->
+  <link href="style.css" rel="stylesheet" />
+  <!-- title -->
+  <title>Sysmex</title>
+</head>
+<!-- body -->
+
+<body>
+  <div class="container mt-3">
+    <div class="row">
+    
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 logout-button">
+        <button type="button" class="btn btn-labeled btn-primary" onclick="onClickLogout()">
+          <span class="btn-label"><i class="fa fa-sign-out"></i></span>Logout
+        </button>
+      </div>
+    </div>
+    <div class="product-detail">
+      <img src="../images/sysmex.png" alt="logo" class="logo" />
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <img src="../images/product.jpg" alt="" class="product-image" />
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="product-info">
+            <h2 class="product-name">General Anesthesia Machine MD-751AK</h2>
+            <h4 class="product-price mt-3">
+              Price:<span class="price-value"> $1234 </span>
+            </h4>
+            <p class="product-description mt-3">
+              The main ventilation modes include VCV (volume control
+              ventilation) and PCV (pressure control ventilation). 
+            </p>
+            <h5 class="bar-code">
+              Bar code: <span class="bar-code-value" id="barcode-value"></span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript link -->
+  <script>
+    function onClickLogout() {
+      window.location.href = "../Login/login.html"
+    }
+    window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+    document.getElementById('barcode-value').innerHTML = data.result;
+} 
+  </script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
