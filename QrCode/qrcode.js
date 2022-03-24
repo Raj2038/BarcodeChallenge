@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
 });
 
   function onClickBack() {
-    window.location.href = "../Login/login.html"
+    window.location.href = "../Login/index.html"
   }
 
   function onClickNext(){
